@@ -1,2 +1,6 @@
 # Fitness-Calculator
-Instead of paying $120/yr for TrainingPeaks, I made my own Fitness/Fatigue/Form calculator for cycling training
+Instead of paying $120/yr for TrainingPeaks, I made my own Fitness/Fatigue/Form calculator for cycling training. This is a really rudimentary way to do this, but the graph tracks perfectly with ones I've gotten from stravastix and strava's own premium features, so I trust its information. While the exact numbers may not be "correct," they are consistenly tracking correctly. So just like how power meters may not be "correct," as long as they are consistent, they are useful.
+
+data.txt is a simple text file with 4 columns, the first 3 comprising the date of the activity, and the fourth comprising the TSS score of that day's activity. I manually entered all of this, as I never got around to making a script that ran it for me. The TSS scores came from the TrainingPeaks iPhone app, as its only free feature is to give a TSS score. 
+
+fitNums.txt is essentially an "expanded view" of data.txt. It is the same information, only appended with Fit, Fatigue, and Form values by day. The script then pulls the final calculated values out and prints them on the console when the file is run. The data from this file gets plotted against time, too. The numbers on the x-axis of the plot are in terms of days. Also, it takes close to 42 data points for this script to become consistent, based on the way fitness is calculated on a 42-day rolling average. 
